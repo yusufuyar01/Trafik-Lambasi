@@ -1,0 +1,40 @@
+
+String komut;//klavyeden girilen komutu belirtmek için tanımladık.
+int kirmizi=4;//kırmızı ledi 4.pine bağladık ve tanımladık.
+int sari=5;//sarı ledi 5.pine bağladık ve tanımladık.
+int yesil=6;//yeşil ledi 6.pine bağladık ve tanımladık.
+
+void setup() {
+  Serial.begin(9600);//seri iletişimi başlattık.
+  pinMode(kirmizi,OUTPUT);//4. pinden kırmızı lede çıkış verdik.
+  pinMode(sari,OUTPUT);//5. pinden sarı lede çıkış verdik.
+  pinMode(yesil,OUTPUT);//6. pinden yeşil pine çıkış verdik.
+  
+}
+
+void loop() {
+     
+ if(Serial.available()){//veri geliyorsa uygulanacak işlemleri if ile belirttik.
+  komut=Serial.readString();//girilen değeri komut değişkenine ata.
+  if(komut=="dur"){//komut değişkeni "dur" ise...
+    digitalWrite(kirmizi,HIGH);//kırmızı ledi yak.
+    digitalWrite(sari,LOW);//sarı ledi söndür.
+    digitalWrite(yesil,LOW);//yeşil ledi söndür.
+    
+    }
+    if(komut=="hazirlan"){//komut değişkeni "hazirlan" ise...
+    digitalWrite(kirmizi,LOW);//kırmızı ledi söndür. 
+    digitalWrite(sari,HIGH);//sarı ledi yak.
+    digitalWrite(yesil,LOW);//yeşil ledi söndür.
+    
+    }
+    if(komut=="gec"){//komut değişkeni "gec" ise...
+    digitalWrite(kirmizi,LOW);//kırmızı ledi söndür.
+    digitalWrite(sari,LOW);//sarı ledi söndür.
+    digitalWrite(yesil,HIGH);//yeşil ledi yak.
+    
+    }
+  
+  }
+  
+}
