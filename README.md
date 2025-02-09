@@ -36,7 +36,8 @@ Bu proje, Arduino kartı ve üç adet LED (kırmızı, sarı, yeşil) kullanıla
 2. Seri monitöre aşağıdaki komutları girerek LED'leri kontrol edebilirsiniz:
    - `dur`: Kırmızı LED yanar, diğerleri söner.
    - `hazirlan`: Sarı LED yanar, diğerleri söner.
-   - `gec`: Yeşil LED yanar, diğerleri söner.<br/>
+   - `gec`: Yeşil LED yanar, diğerleri söner.
+<br/>
   ![Image](https://github.com/user-attachments/assets/36ab155f-4d8a-4a34-aec4-75d887802c4b)
 
 ## Kod Açıklaması
